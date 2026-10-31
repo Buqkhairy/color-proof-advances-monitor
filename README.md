@@ -48,9 +48,15 @@ The file was originally built for claude.ai, where a shared database gives teams
 
 Note that a free GitHub Pages site is public. The page contains none of your data, but anyone with the address can open the dashboard.
 
-## Sharing live data with a team
+## Live team data with Supabase
 
-For shared, real-time data outside claude.ai, the page needs a backend such as Supabase or Firebase. That is not included here.
+1. Create a free project at supabase.com.
+2. In **SQL Editor**, run the contents of `supabase-setup.sql`.
+3. In **Authentication → Sign In / Providers**, turn off new sign-ups. Then add each teammate under **Authentication → Users → Add user** with an email and password.
+4. In **Project Settings → API**, copy the Project URL and the `anon` public key.
+5. Near the top of the script in `index.html`, replace `PASTE_PROJECT_URL` and `PASTE_ANON_KEY` with those two values and commit.
+
+Teammates then sign in on the page and see the same projects, comments and activity in real time. Until the two values are filled in, the page works in local-only mode.
 
 ## Browser support
 
