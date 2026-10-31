@@ -202,3 +202,7 @@ pcol.onSnapshot(s=>{if(first){first=false;try{localStorage.removeItem(KEY)}catch
 last={};P=s.docs.map(x=>des(x.data()));P.forEach(p=>last[p.id]=JSON.stringify(ser(p)));draw()},werr);
 fcol.orderBy("d","desc").limit(40).onSnapshot(s=>{FD=FD.filter(f=>f.n).concat(s.docs.map(x=>({...x.data(),id:x.id,d:new Date(x.data().d)})));feed();notif()},werr)}catch(e){werr(e)}})();
 </script></body></html>
+const SB = {
+  url: "https://tyqnrswsnvhgkmnlrbqz.supabase.co/rest/v1/",
+  anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5cW5yc3dzbnZoZ2ttbmxyYnF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0NTMzMjAsImV4cCI6MjEwOTAyOTMyMH0.VQqVruUA753fqDGw4l6woa3rqUlmOzIhV7gg6x_t8QQ"
+};
